@@ -1,0 +1,1096 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RWD | Professional Websites for Small Businesses</title>
+  <meta name="description" content="RWD creates affordable, professional websites for small businesses. Explore our website packages and request your website today.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --panel: #151515;
+      --gold: #d5b779;
+      --gold-light: #efdbac;
+      --white: #f8f7f3;
+      --muted: #aaa9a3;
+      --line: #30302d;
+      --font: "DM Sans", sans-serif;
+      --heading: "Manrope", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      background: var(--gold);
+      color: #141414;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #0b0b0bf2;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-family: var(--heading);
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .brand span:last-child span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      color: #deddd7;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nav-links a:not(.button):hover {
+      color: var(--gold);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 47px;
+      padding: 0 20px;
+      background: var(--gold);
+      color: #17140d;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: #77756e;
+    }
+
+    .button-outline:hover {
+      background: var(--gold);
+      color: #17140d;
+      border-color: var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 110px 0 105px;
+      background:
+        radial-gradient(ellipse at 85% 20%, #d5b77915, transparent 40%),
+        linear-gradient(135deg, #101010, #090909 70%);
+    }
+
+    .hero::after {
+      content: "RWD";
+      position: absolute;
+      right: -20px;
+      bottom: -95px;
+      color: #ffffff05;
+      font-family: var(--heading);
+      font-size: clamp(180px, 35vw, 430px);
+      font-weight: 800;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--heading);
+      line-height: 1.17;
+      letter-spacing: -1.2px;
+    }
+
+    h1 {
+      margin: 25px 0 20px;
+      font-size: clamp(45px, 7vw, 79px);
+      font-weight: 700;
+    }
+
+    h1 span, h2 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 590px;
+      color: #b8b7b1;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .hero-note {
+      margin-top: 32px;
+      color: #93928c;
+      font-size: 11px;
+    }
+
+    .hero-note strong {
+      color: var(--gold);
+    }
+
+    section.section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      margin: 15px 0;
+      font-size: clamp(32px, 4vw, 46px);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .packages {
+      background: #101010;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .package-card {
+      display: flex;
+      flex-direction: column;
+      padding: 32px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .package-card:hover {
+      transform: translateY(-4px);
+      border-color: #8b7850;
+    }
+
+    .package-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(145deg, #1b1914, #141414 65%);
+    }
+
+    .package-label {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .package-card h3 {
+      margin-top: 15px;
+      font-size: 25px;
+    }
+
+    .price {
+      margin: 18px 0;
+      font-family: var(--heading);
+      font-size: 47px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .package-description {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .package-features {
+      display: grid;
+      gap: 13px;
+      margin: 25px 0 30px;
+      list-style: none;
+    }
+
+    .package-features li {
+      display: flex;
+      gap: 10px;
+      color: #deddd7;
+      font-size: 12px;
+    }
+
+    .package-features li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    .package-card .button {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .package-footnote {
+      margin-top: 25px;
+      color: #8f8e88;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .step {
+      padding-top: 20px;
+      border-top: 1px solid #716044;
+    }
+
+    .step-number {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .step h3 {
+      margin: 15px 0 10px;
+      font-size: 19px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .demo-section {
+      background: #111;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .demo-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+    }
+
+    .demo-preview {
+      min-height: 175px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .demo-preview.basic {
+      background: #f5f5f2;
+      color: #17191c;
+    }
+
+    .demo-preview.standard {
+      background: linear-gradient(135deg, #0b1728, #17395b);
+      color: white;
+    }
+
+    .preview-tag {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .preview-title {
+      font-family: var(--heading);
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .preview-line {
+      width: 45px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    .demo-body {
+      padding: 24px;
+    }
+
+    .demo-body h3 {
+      font-size: 19px;
+    }
+
+    .demo-body p {
+      margin: 9px 0 20px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .demo-body .button {
+      width: 100%;
+    }
+
+    .contact {
+      background:
+        radial-gradient(ellipse at 90% 20%, #d5b77910, transparent 40%),
+        #0b0b0b;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-intro h2 {
+      margin: 18px 0;
+      font-size: clamp(35px, 4.5vw, 51px);
+    }
+
+    .contact-intro > p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .contact-packages {
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-package {
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-package > span {
+      color: var(--gold);
+      font-size: 11px;
+    }
+
+    .contact-package strong,
+    .contact-package small {
+      display: block;
+    }
+
+    .contact-package strong {
+      font-size: 13px;
+    }
+
+    .contact-package small {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .contact-package b {
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .inquiry-form {
+      padding: 30px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 7px;
+    }
+
+    .inquiry-form h3 {
+      font-size: 24px;
+    }
+
+    .form-subtitle {
+      margin: 8px 0 24px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .inquiry-form label {
+      display: block;
+      margin: 17px 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .inquiry-form label span {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .inquiry-form input,
+    .inquiry-form select,
+    .inquiry-form textarea {
+      width: 100%;
+      min-height: 46px;
+      padding: 12px;
+      border: 1px solid #41413c;
+      border-radius: 4px;
+      background: #0d0d0d;
+      color: white;
+      font-family: var(--font);
+      font-size: 13px;
+    }
+
+    .inquiry-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .inquiry-form input:focus,
+    .inquiry-form select:focus,
+    .inquiry-form textarea:focus {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    .contact-hint {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.7;
+    }
+
+    .submit-button {
+      width: 100%;
+      min-height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+      padding: 0 17px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--gold);
+      color: #141414;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: var(--gold-light);
+    }
+
+    .privacy-note {
+      margin-top: 13px;
+      color: #8f8e88;
+      font-size: 10px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .form-status {
+      margin-top: 15px;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      background: #080808;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .footer-brand span {
+      color: var(--gold);
+    }
+
+    footer p {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .package-card {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .nav {
+        min-height: 70px;
+      }
+
+      .brand {
+        font-size: 21px;
+      }
+
+      .nav-links .button {
+        padding: 0 12px;
+        font-size: 9px;
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      section.section {
+        padding: 65px 0;
+      }
+
+      .package-grid,
+      .steps-grid,
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-card {
+        padding: 25px 21px;
+      }
+
+      .inquiry-form {
+        padding: 24px 18px;
+      }
+
+      .footer-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Professional websites · Straightforward pricing · Built for small business
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="RWD home">
+        <span class="brand-mark">R</span>
+        <span>RWD<span>.</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#packages">Packages</a>
+        <a href="#process">How It Works</a>
+        <a href="#demos">Live Demos</a>
+        <a class="button" href="#contact">Get Started ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Web design for small business</div>
+        <h1>Your business deserves<br>a better <span>website.</span></h1>
+        <p>
+          RWD builds clean, professional websites that help small businesses
+          establish an online presence, showcase their services, and make it
+          easier for customers to get in touch.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="#packages">Explore Packages ↗</a>
+          <a class="button button-outline" href="#demos">View Website Demos</a>
+        </div>
+
+        <div class="hero-note">
+          <strong>$99–$149</strong> &nbsp; Simple, upfront starting packages.
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages" id="packages">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Straightforward pricing</div>
+          <h2>The right website for <span>your next step.</span></h2>
+          <p>
+            Choose the package that fits your business. We'll discuss your
+            needs, customize your website, and agree on the details before work begins.
+          </p>
+        </div>
+
+        <div class="package-grid">
+          <article class="package-card">
+            <div class="package-label">01 / Essential</div>
+            <h3>Basic Website</h3>
+            <div class="price">$99 <small>starting price</small></div>
+            <p class="package-description">
+              A simple, polished online home for a business that needs
+              the essentials done right.
+            </p>
+            <ul class="package-features">
+              <li>One-page responsive website</li>
+              <li>Business information and services</li>
+              <li>Contact and social links</li>
+              <li>Clean mobile-friendly layout</li>
+              <li>One revision round</li>
+            </ul>
+            <a class="button button-outline" href="#contact" data-package="Basic Website - $99">
+              Choose Basic ↗
+            </a>
+          </article>
+
+          <article class="package-card featured">
+            <div class="package-label">02 / Expanded</div>
+            <h3>Standard Website</h3>
+            <div class="price">$149 <small>starting price</small></div>
+            <p class="package-description">
+              A more developed website with additional sections to
+              showcase your services and build customer confidence.
+            </p>
+            <ul class="package-features">
+              <li>Up to four pages or equivalent sections</li>
+              <li>Expanded service information</li>
+              <li>Photo gallery or portfolio section</li>
+              <li>Contact and booking links</li>
+              <li>Two revision rounds</li>
+            </ul>
+            <a class="button" href="#contact" data-package="Standard Website - $149">
+              Choose Standard ↗
+            </a>
+          </article>
+        </div>
+
+        <p class="package-footnote">
+          Prices are starting prices for the listed scope. Domain registration,
+          paid hosting, ongoing maintenance, third-party subscriptions, and
+          additional work are separate unless specifically included in your agreement.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">The process</div>
+          <h2>From idea to <span>online.</span></h2>
+          <p>
+            A straightforward process that keeps you informed from your first
+            inquiry to the final website.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step">
+            <div class="step-number">01 / CONNECT</div>
+            <h3>Tell Us About Your Business</h3>
+            <p>
+              Choose your package and share your business information,
+              goals, and ideas.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">02 / CREATE</div>
+            <h3>We Build Your Website</h3>
+            <p>
+              We develop a design around your business, your services,
+              and the customers you want to reach.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">03 / LAUNCH</div>
+            <h3>Review and Go Live</h3>
+            <p>
+              Review the website, request the included revisions, and
+              arrange publishing once everything is approved.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demos">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">See the difference</div>
+          <h2>Explore our <span>website demos.</span></h2>
+          <p>
+            Browse sample designs to see how the Basic and Standard packages
+            can look. These are demonstration websites, not live customer sites.
+          </p>
+        </div>
+
+        <div class="demo-grid">
+          <article class="demo-card">
+            <div class="demo-preview basic">
+              <div class="preview-tag">Essential package</div>
+              <div class="preview-title">Clean. Simple. Professional.</div>
+              <div class="preview-line"></div>
+              <p>Basic Website · $99</p>
+            </div>
+            <div class="demo-body">
+              <h3>Basic Website Demo</h3>
+              <p>
+                A clean one-page layout with business details, service
+                cards, and a clear contact section.
+              </p>
+              <a class="button button-outline" href="basic-demo/index.html" target="_blank" rel="noopener">
+                View Basic Demo ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-preview standard">
+              <div class="preview-tag">Expanded package</div>
+              <div class="preview-title">More room to stand out.</div>
+              <div class="preview-line"></div>
+              <p>Standard Website · $149</p>
+            </div>
+            <div class="demo-body">
+              <h3>Standard Website Demo</h3>
+              <p>
+                An expanded design with a gallery, additional sections,
+                and more space to showcase a business.
+              </p>
+              <a class="button" href="standard-demo/index.html" target="_blank" rel="noopener">
+                View Standard Demo ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <div class="eyebrow">Let's build something</div>
+          <h2>Let's get your business <span>online.</span></h2>
+          <p>
+            Choose the package you're interested in and tell us how to reach
+            you. We'll follow up to discuss your business and what you'd like
+            your website to accomplish.
+          </p>
+
+          <div class="contact-packages">
+            <div class="contact-package">
+              <span>01</span>
+              <div>
+                <strong>Basic Website</strong>
+                <small>One-page website with the essentials</small>
+              </div>
+              <b>$99</b>
+            </div>
+            <div class="contact-package">
+              <span>02</span>
+              <div>
+                <strong>Standard Website</strong>
+                <small>Expanded layout and more sections</small>
+              </div>
+              <b>$149</b>
+            </div>
+          </div>
+        </div>
+
+        <form
+          id="rwd-inquiry-form"
+          class="inquiry-form"
+          action="https://formsubmit.co/revanwebdesigner@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New RWD Website Inquiry">
+          <input type="hidden" name="_template" value="table">
+
+          <h3>Request a website</h3>
+          <p class="form-subtitle">
+            Share a few details below. We'll contact you to discuss next steps.
+          </p>
+
+          <label for="rwd-name">Your name *</label>
+          <input
+            id="rwd-name"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            autocomplete="name"
+            required
+          >
+
+          <label for="rwd-business">Business name</label>
+          <input
+            id="rwd-business"
+            type="text"
+            name="business_name"
+            placeholder="Your business name"
+            autocomplete="organization"
+          >
+
+          <label for="rwd-package">Choose a package *</label>
+          <select id="rwd-package" name="package" required>
+            <option value="" disabled selected>Select a package</option>
+            <option value="Basic Website - $99">Basic Website — $99</option>
+            <option value="Standard Website - $149">Standard Website — $149</option>
+            <option value="Not sure yet">Not sure yet — help me choose</option>
+          </select>
+
+          <label for="rwd-email">Email address</label>
+          <input
+            id="rwd-email"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+          >
+
+          <label for="rwd-phone">Phone number</label>
+          <input
+            id="rwd-phone"
+            type="tel"
+            name="phone"
+            placeholder="Your phone number"
+            autocomplete="tel"
+          >
+
+          <p class="contact-hint">
+            Enter at least one contact method: email or phone.
+          </p>
+
+          <label for="rwd-details">
+            Tell us about your project <span>(optional)</span>
+          </label>
+          <textarea
+            id="rwd-details"
+            name="project_details"
+            rows="4"
+            placeholder="What does your business do? What would you like your website to include?"
+          ></textarea>
+
+          <button class="submit-button" type="submit">
+            Submit Website Request <span>↗</span>
+          </button>
+
+          <p class="privacy-note">
+            Your information will be used to respond to your website inquiry.
+          </p>
+          <p id="rwd-form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <a href="#" class="footer-brand">RWD<span>.</span></a>
+        <p>Professional websites for small businesses.</p>
+      </div>
+      <p class="footer-note">
+        © <span id="rwd-year"></span> RWD. All rights reserved.
+        Website packages are subject to the agreed project scope.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("rwd-year").textContent = new Date().getFullYear();
+
+    const rwdForm = document.getElementById("rwd-inquiry-form");
+    const rwdEmail = document.getElementById("rwd-email");
+    const rwdPhone = document.getElementById("rwd-phone");
+    const rwdPackage = document.getElementById("rwd-package");
+    const rwdStatus = document.getElementById("rwd-form-status");
+
+    document.querySelectorAll("[data-package]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        rwdPackage.value = link.dataset.package;
+      });
+    });
+
+    rwdForm.addEventListener("submit", function (event) {
+      if (!rwdEmail.value.trim() && !rwdPhone.value.trim()) {
+        event.preventDefault();
+        rwdStatus.style.color = "#ef8e80";
+        rwdStatus.textContent =
+          "Please enter an email address or phone number so we can contact you.";
+        (!rwdEmail.value.trim() ? rwdEmail : rwdPhone).focus();
+        return;
+      }
+
+      rwdStatus.style.color = "#d5b779";
+      rwdStatus.textContent = "Submitting your request…";
+    });
+  </script>
+</body>
+</html>
