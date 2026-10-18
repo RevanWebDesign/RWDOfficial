@@ -1,0 +1,1136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Auto Detailing | Standard Website Concept by RWD</title>
+  <meta name="description" content="A premium automotive detailing website concept.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b1728;
+      --panel: #10223a;
+      --panel-light: #172d49;
+      --blue: #2388e8;
+      --blue-light: #67c5ff;
+      --ice: #dceeff;
+      --white: #f7faff;
+      --muted: #a8b9cc;
+      --line: #2a405b;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--sans);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      text-align: center;
+      background: var(--blue);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #0b1728f5;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      background: var(--blue);
+      color: white;
+      font-family: var(--serif);
+      font-size: 25px;
+      border-radius: 8px;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--blue-light);
+      font-size: 9px;
+      letter-spacing: 1.8px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #d6e2ef;
+      font-size: 11px;
+    }
+
+    .nav-links a:not(.button):hover {
+      color: var(--blue-light);
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 11px;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid var(--blue);
+      border-radius: 5px;
+      background: var(--blue);
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform .25s, background .25s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #126bc0;
+      border-color: #126bc0;
+    }
+
+    .button-outline {
+      background: transparent;
+      border-color: #7792af;
+      color: white;
+    }
+
+    .button-outline:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #091526 0%, #091526ed 30%, #0915269c 59%, #09152630 100%),
+        linear-gradient(0deg, var(--bg), transparent 28%),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90") center 55% / cover;
+    }
+
+    .hero-content {
+      max-width: 660px;
+      padding: 95px 0 100px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--blue-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--blue-light);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.18;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+    }
+
+    h1 {
+      margin: 25px 0 22px;
+      font-size: clamp(45px, 6.5vw, 79px);
+      letter-spacing: -1px;
+    }
+
+    h1 em, .cta h2 em {
+      color: var(--blue-light);
+      font-weight: 400;
+    }
+
+    .hero-description {
+      max-width: 490px;
+      color: #d0dceb;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+    }
+
+    .hero-caption {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 52px;
+      color: #d0dceb;
+      font-size: 10px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    .caption-line {
+      width: 40px;
+      height: 2px;
+      background: var(--blue-light);
+    }
+
+    .trust-bar {
+      background: var(--panel);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      min-height: 110px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:first-child {
+      border-left: 1px solid var(--line);
+    }
+
+    .trust-item strong {
+      color: var(--blue-light);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .trust-item span {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    section.section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      margin-top: 15px;
+      font-size: clamp(35px, 4.4vw, 52px);
+    }
+
+    .section-heading > p {
+      max-width: 360px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      transition: transform .3s, border-color .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--blue);
+    }
+
+    .service-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-image img {
+      height: 240px;
+      transition: transform .6s;
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.05);
+    }
+
+    .service-image span {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 6px 10px;
+      background: #0b1728ed;
+      color: var(--blue-light);
+      font-size: 9px;
+      letter-spacing: 1.4px;
+    }
+
+    .service-body {
+      padding: 25px;
+    }
+
+    .service-body h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .service-body p {
+      min-height: 66px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 19px;
+      color: var(--blue-light);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .feature-band {
+      padding: 45px 0;
+      background: var(--blue);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .feature-label {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: .85;
+    }
+
+    .feature-grid h3 {
+      margin-top: 5px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .feature-grid p {
+      font-size: 11px;
+      line-height: 1.9;
+      color: #eaf4ff;
+    }
+
+    .gallery {
+      background: #0d1c30;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      grid-template-rows: 205px 205px;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      background: var(--panel);
+      border-radius: 5px;
+    }
+
+    .gallery-item:first-child {
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      transition: transform .6s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 40px 17px 15px;
+      background: linear-gradient(transparent, #071321e8);
+      color: white;
+      font-family: var(--serif);
+      font-size: 17px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      height: 460px;
+      border-radius: 7px;
+    }
+
+    .image-stamp {
+      position: absolute;
+      right: -20px;
+      bottom: 25px;
+      width: 155px;
+      padding: 20px 15px;
+      background: var(--blue);
+      color: white;
+      text-align: center;
+    }
+
+    .image-stamp strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .image-stamp span {
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .about-copy h2 {
+      margin: 17px 0;
+      font-size: clamp(35px, 4vw, 48px);
+    }
+
+    .about-copy > p {
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      margin: 26px 0 32px;
+    }
+
+    .check-list div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    .check-list span {
+      color: var(--blue-light);
+    }
+
+    .process {
+      background: var(--panel);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .process-card {
+      padding-top: 20px;
+      border-top: 2px solid var(--blue);
+    }
+
+    .process-number {
+      color: var(--blue-light);
+      font-family: var(--serif);
+      font-size: 32px;
+    }
+
+    .process-card h3 {
+      margin: 15px 0 9px;
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 400;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .cta {
+      padding: 100px 0;
+      text-align: center;
+      background:
+        linear-gradient(#091526e8, #091526f0),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85") center / cover;
+    }
+
+    .cta-inner {
+      max-width: 730px;
+      margin: auto;
+    }
+
+    .cta .eyebrow {
+      justify-content: center;
+    }
+
+    .cta h2 {
+      margin: 20px 0;
+      font-size: clamp(39px, 5.3vw, 62px);
+    }
+
+    .cta p {
+      max-width: 500px;
+      margin: auto;
+      color: #d0dceb;
+      font-size: 13px;
+    }
+
+    .cta .button {
+      margin-top: 30px;
+    }
+
+    footer {
+      padding: 35px 0;
+      background: #081321;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-brand {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .footer-brand span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: .5px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue-light);
+    }
+
+    .footer-bottom {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: #8193a8;
+      font-size: 9px;
+    }
+
+    .demo-label {
+      margin-top: 8px;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      .hero {
+        min-height: 560px;
+        background-position: 58% center;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-item:nth-child(3) {
+        border-left: 1px solid var(--line);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .services-grid .service-card:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .about-grid {
+        gap: 40px;
+      }
+
+      .feature-grid {
+        gap: 20px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 35px;
+      }
+
+      .gallery-grid {
+        grid-template-rows: 170px 170px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .nav {
+        min-height: 72px;
+      }
+
+      .brand-text strong {
+        font-size: 10px;
+        letter-spacing: 1.4px;
+      }
+
+      .brand-text span {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+
+      .brand-mark {
+        width: 37px;
+        height: 37px;
+      }
+
+      .nav-links .button {
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 9px;
+      }
+
+      .hero-content {
+        padding: 72px 0 58px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .hero-caption {
+        margin-top: 38px;
+      }
+
+      .trust-item {
+        min-height: 95px;
+        padding: 15px 12px;
+      }
+
+      .trust-item strong {
+        font-size: 17px;
+      }
+
+      .trust-item span {
+        font-size: 8px;
+        letter-spacing: .8px;
+      }
+
+      section.section {
+        padding: 70px 0;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid .service-card:last-child {
+        grid-column: auto;
+      }
+
+      .service-image img {
+        height: 230px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 240px 150px 150px;
+      }
+
+      .gallery-item:first-child {
+        grid-column: 1 / -1;
+        grid-row: auto;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .about-image img {
+        height: 330px;
+      }
+
+      .image-stamp {
+        right: 10px;
+        bottom: 15px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 18px;
+      }
+
+      .cta {
+        padding: 75px 0;
+      }
+
+      .footer-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Automotive care, thoughtfully delivered · By appointment
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">
+          <strong>ATELIER AUTO</strong>
+          <span>VEHICLE DETAILING</span>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#gallery">Our Work</a>
+        <a href="#about">About</a>
+        <a class="button" href="#contact">Get a Quote ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">A new standard of detailing</div>
+          <h1>Made to shine.<br><em>Built to impress.</em></h1>
+          <p class="hero-description">
+            Premium-minded automotive care for drivers who appreciate
+            a clean finish and a refined experience. From a refreshed
+            interior to a polished exterior, every detail matters.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#contact">Request a Quote ↗</a>
+            <a class="button button-outline" href="#services">Discover Our Services</a>
+          </div>
+
+          <div class="hero-caption">
+            <span class="caption-line"></span>
+            Thoughtful care for every drive
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>Personalized</strong>
+          <span>Care for your vehicle</span>
+        </div>
+        <div class="trust-item">
+          <strong>Detail-focused</strong>
+          <span>Attention to the small things</span>
+        </div>
+        <div class="trust-item">
+          <strong>Convenient</strong>
+          <span>Appointment-based service</span>
+        </div>
+        <div class="trust-item">
+          <strong>Made for you</strong>
+          <span>Services to fit your needs</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Our services</div>
+            <h2>Care beyond the surface.</h2>
+          </div>
+          <p>
+            Every vehicle has different needs. Explore the services
+            and find the right way to refresh your ride.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1000&q=85" alt="Clean vehicle exterior">
+              <span>01 / EXTERIOR</span>
+            </div>
+            <div class="service-body">
+              <h3>Exterior Refinement</h3>
+              <p>
+                A careful exterior clean focused on refreshing your
+                vehicle's appearance and leaving a polished finish.
+              </p>
+              <a class="service-link" href="#contact">Explore service ↗</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=85" alt="Premium vehicle">
+              <span>02 / INTERIOR</span>
+            </div>
+            <div class="service-body">
+              <h3>Interior Refresh</h3>
+              <p>
+                Give your cabin a cleaner, fresher feel with focused
+                attention to the surfaces you use every day.
+              </p>
+              <a class="service-link" href="#contact">Explore service ↗</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1000&q=85" alt="Dark vehicle with refined styling">
+              <span>03 / COMPLETE</span>
+            </div>
+            <div class="service-body">
+              <h3>The Complete Detail</h3>
+              <p>
+                Combine interior and exterior care for a more
+                comprehensive vehicle refresh from front to back.
+              </p>
+              <a class="service-link" href="#contact">Explore service ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-band">
+      <div class="container feature-grid">
+        <div>
+          <div class="feature-label">Our philosophy</div>
+          <h3>Excellence in every detail.</h3>
+        </div>
+        <div>
+          <p>
+            Great results begin with understanding your vehicle,
+            your priorities, and the finish you want to achieve.
+          </p>
+        </div>
+        <div>
+          <p>
+            Clear communication, careful work, and service
+            shaped around what matters to you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">The gallery</div>
+            <h2>Appreciate the details.</h2>
+          </div>
+          <p>
+            A visual collection of automotive design, striking finishes,
+            and vehicles that deserve a closer look.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85" alt="Sleek performance car">
+            <div class="gallery-caption">The exterior finish</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85" alt="Luxury sports car">
+            <div class="gallery-caption">Automotive elegance</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=85" alt="Automotive detail">
+            <div class="gallery-caption">The finer details</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=85" alt="Performance vehicle">
+            <div class="gallery-caption">Performance and style</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=85" alt="Classic automotive design">
+            <div class="gallery-caption">Made to be appreciated</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=1200&q=85" alt="Premium vehicle">
+          <div class="image-stamp">
+            <strong>01—01</strong>
+            <span>Individual attention</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="eyebrow">Our approach</div>
+          <h2>Your vehicle. Your standards.</h2>
+          <p>
+            Great detailing starts with listening. Understanding how
+            you use your vehicle helps us identify the services that
+            make the biggest difference for you.
+          </p>
+          <p>
+            Whether it's your daily driver or your weekend favorite,
+            the goal is a cleaner, more enjoyable vehicle and a
+            straightforward experience from start to finish.
+          </p>
+
+          <div class="check-list">
+            <div><span>✦</span> Services tailored to your priorities</div>
+            <div><span>✦</span> Clear communication before work begins</div>
+            <div><span>✦</span> Careful attention throughout the process</div>
+          </div>
+
+          <a class="button button-outline" href="#contact">Let's Discuss Your Vehicle ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">How it works</div>
+            <h2>Simple from start to finish.</h2>
+          </div>
+          <p>
+            A clear process makes planning your next detail
+            easy and straightforward.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-number">01</div>
+            <h3>Make an Inquiry</h3>
+            <p>Tell us about your vehicle and the type of care you're looking for.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-number">02</div>
+            <h3>Choose Your Service</h3>
+            <p>Discuss available options and choose the right service for your needs.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-number">03</div>
+            <h3>Arrange a Time</h3>
+            <p>Confirm the details, pricing, and an appointment that works for you.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-number">04</div>
+            <h3>Enjoy the Result</h3>
+            <p>Get back to enjoying a clean, refreshed vehicle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <div class="eyebrow">Your next detail starts here</div>
+        <h2>Give your vehicle<br><em>the care it deserves.</em></h2>
+        <p>
+          Tell us about your vehicle, explore service options,
+          and request a quote tailored to your needs.
+        </p>
+        <!-- Replace this placeholder with the business's actual email. -->
+        <a class="button" href="mailto:YOUR-EMAIL@example.com">Request Your Quote ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          ATELIER AUTO
+          <span>Thoughtful care for every drive.</span>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Atelier Auto. Demo website concept.</p>
+        <p class="demo-label">
+          Website concept by RWD. Replace sample business details and imagery before launch.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
